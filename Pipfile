@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+tensorflow = "*"
+numpy = "*"
+scipy = "*"
+scikit-learn = "*"
+pillow = "*"
+"h5py" = "*"
+keras = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
