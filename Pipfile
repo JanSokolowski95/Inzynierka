@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 django = "*"
-tensorflow = "*"
+tensorflow = "==1.5"
 numpy = "*"
 scipy = "*"
 scikit-learn = "*"
