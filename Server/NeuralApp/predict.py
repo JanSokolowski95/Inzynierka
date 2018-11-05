@@ -4,6 +4,7 @@ from keras.models import Sequential
 from keras.layers import Dropout, Flatten, Dense
 from keras.applications.vgg16 import VGG16
 from keras.applications.vgg16 import preprocess_input
+from keras.backend import clear_session
 
 # dimensions of our images.
 (img_width, img_height) = (224, 224)
@@ -28,4 +29,5 @@ class Network:
         
         features = self.model.predict(x)
         img_class = self.top_model.predict(features)
+        clear_session()
         return img_class[0]
