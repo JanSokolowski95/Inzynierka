@@ -1,5 +1,9 @@
+{% extends 'NeuralApp/base.html' %}
+
+{% block pagecontent %}
 <p>
 {% for result in results %}
 	{{result}}<br/>
 {% endfor %}
 </p>
+{% endblock %}
