@@ -13,7 +13,7 @@ def upload_file(request):
             results = handle_uploaded_file(request.FILES['image'])
             return render(request, 'NeuralApp/results.html', {'results': results})
         else:
-            print('coś się zjebało xd')
+            print('error uploading file')
             form = UploadImageForm()
     return render(request, 'NeuralApp/home.html', {'form': form})
 
