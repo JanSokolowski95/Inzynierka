@@ -8,6 +8,8 @@ from keras.backend import clear_session
 
 # dimensions of our images.
 (img_width, img_height) = (224, 224)
+classes = ['fabric', 'foliage', 'glass', 'leather', 'metal', 'paper', 
+    'plastic', 'stone', 'water', 'wood']
 
 class Network:
     def __init__(self, weights_path):
@@ -29,5 +31,6 @@ class Network:
         
         features = self.model.predict(x)
         img_class = self.top_model.predict(features)
+        
         clear_session()
-        return img_class[0]
+        return  zip(classes, img_class[0])
