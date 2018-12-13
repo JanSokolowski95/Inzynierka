@@ -1,9 +1,26 @@
 {% extends 'NeuralApp/base.html' %}
 
 {% block pagecontent %}
-<form action="/NeuralApp/" method="post" enctype="multipart/form-data">
-	{% csrf_token %}
-	{{ form }}
-    <input type="submit" value="Submit" />
-</form>
+<div class="row">
+	<div class=col-md-8>
+		<br>
+		<form action="/NeuralApp/" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ form.as_p }}	
+			<input type="submit" class="btn"value="Submit" />
+		</form>
+	</div>
+	<div class=col-md-4>
+		<p><ol>Instrukcja:
+			<li>Wybierz plik z dysku, który chcesz sprawdzić. Obługiwane formaty plików: JPG, PNG.
+			<li>Wciśnij Submit, aby aplikacja rozpoznała materiał ze zdjęcia.
+		</ol>
+		<br>
+		<p><ul>Autorzy aplikacji: 
+			<li>Marta Jasińska
+			<li>Kacper Skoczek
+			<li>Jan Sokołowski
+		</ul>
+	</div>
+</div>
 {% endblock %}
